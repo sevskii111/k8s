@@ -30,6 +30,7 @@ spec:
               key: {{ $key | lower | replace "_" "-" }}
               name: {{ $val }}
         {{- end }}
+        name: application
         image: {{ .Values.image }}:{{ .Values.imageTag }}
         imagePullPolicy: IfNotPresent
         ports:
