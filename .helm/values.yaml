@@ -1,0 +1,22 @@
+# This is a YAML-formatted file.
+
+image: registry.slurm.io/slurm/xpaste
+imageTag: master.1
+imagePullSecret: xpaste-gitlab-registry
+
+env:
+  DATABASE_URL: redis
+  DATABASE_PORT: 6379
+
+envSecret:
+  DATABASE_PASSWORD: ""
+
+service:
+  port: 80
+
+ingress:
+  host: flask.s054040.edu.slurm.io
+
+master:
+  persistence:
+    existingClaim: redis-pvc
