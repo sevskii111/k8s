@@ -6,7 +6,7 @@ imagePullSecret: gitlab-registry-pull
 
 env:
   DATABASE_URL: s054040-k8s-dev-cert-project-redis-headless
-  DATABASE_PASSWORD: ""
+  DATABASE_PASSWORD: "48zRUapqY8"
   DATABASE_PORT: 6379
 
 service:
@@ -20,4 +20,6 @@ redis:
     persistence:
       existingClaim: redis-pvc
   replica:
-    replicaCount: 0 
+    replicaCount: 0
+  auth:
+    password: 48zRUapqY8
