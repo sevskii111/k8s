@@ -23,13 +23,6 @@ spec:
         - name: {{ $key | quote }}
           value: {{ $val | quote }}
         {{- end }}
-        {{- range $key, $val := .Values.envSecret }}
-        - name: {{ $key | quote }}
-          valueFrom:
-            secretKeyRef:
-              key: {{ $key | lower | replace "_" "-" }}
-              name: {{ $val }}
-        {{- end }}
         name: application
         image: {{ .Values.image }}:{{ .Values.imageTag }}
         imagePullPolicy: IfNotPresent

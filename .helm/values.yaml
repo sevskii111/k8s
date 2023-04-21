@@ -6,10 +6,8 @@ imagePullSecret: xpaste-gitlab-registry
 
 env:
   DATABASE_URL: redis
-  DATABASE_PORT: 6379
-
-envSecret:
   DATABASE_PASSWORD: ""
+  DATABASE_PORT: 6379
 
 service:
   port: 80
