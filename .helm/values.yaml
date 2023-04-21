@@ -10,7 +10,7 @@ env:
   DATABASE_PORT: 6379
 
 service:
-  port: 80
+  port: 5000
 
 ingress:
   host: flask.s054040.edu.slurm.io
