@@ -40,5 +40,6 @@ deploy:
         --atomic
         --debug
         --namespace $CI_PROJECT_PATH_SLUG-$CI_ENVIRONMENT_NAME
+        --create-namespace
   only:
     - main
