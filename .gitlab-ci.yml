@@ -34,7 +34,7 @@ deploy:
     - kubectl config set-context ci --cluster=k8s --user=ci
     - kubectl config use-context ci
     - kubectl -n $CI_PROJECT_PATH_SLUG-$CI_ENVIRONMENT_NAME get secret $OPERATOR_IMAGE_PULL_SECRET
-      || kubectl -n $OPERATOR_NAMESPACE create secret docker-registry $OPERATOR_IMAGE_PULL_SECRET
+      || kubectl -n $CI_PROJECT_PATH_SLUG-$CI_ENVIRONMENT_NAME create secret docker-registry $OPERATOR_IMAGE_PULL_SECRET
       --docker-server=$CI_REGISTRY
       --docker-username=$CI_DEPLOY_USER
       --docker-password="$CI_DEPLOY_PASSWORD"
