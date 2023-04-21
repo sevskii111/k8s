@@ -42,7 +42,7 @@ deploy:
         --set image=$CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME
         --set imageTag=$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
         --wait
-        --timeout 300s
+        --timeout 60s
         --atomic
         --debug
         --namespace $CI_PROJECT_PATH_SLUG-$CI_ENVIRONMENT_NAME

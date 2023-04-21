@@ -2,7 +2,7 @@
 
 image: registry.slurm.io/s054040/k8s_dev_cert_project
 imageTag: master.1
-imagePullSecret: xpaste-gitlab-registry
+imagePullSecret: gitlab-registry-pull
 
 env:
   DATABASE_URL: redis
