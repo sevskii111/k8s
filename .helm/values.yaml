@@ -1,6 +1,6 @@
 # This is a YAML-formatted file.
 
-image: registry.slurm.io/slurm/xpaste
+image: registry.slurm.io/s054040/k8s_dev_cert_project
 imageTag: master.1
 imagePullSecret: xpaste-gitlab-registry
 
