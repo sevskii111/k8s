@@ -15,6 +15,9 @@ service:
 ingress:
   host: flask.s054040.edu.slurm.io
 
-master:
-  persistence:
-    existingClaim: redis-pvc
+redis:
+  master:
+    persistence:
+      existingClaim: redis-pvc
+  replica:
+    replicaCount: 0 
